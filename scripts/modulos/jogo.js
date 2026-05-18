@@ -22,7 +22,9 @@ const PONTOS_INTERFACE = document.querySelector("#pontos");
 const QUANTIDADE_GANKS = document.querySelector("#quantidade-ganks");
 
 const BATERIA = document.querySelector("#bateria");
-const BATERIA_LIMITE = 10;
+
+const BATERIA_LIMITE_MAXIMO = 10;
+const BATERIA_LIMITE_MINIMO = 0;
 
 const MIN_MILISEGUNDOS = 3000;
 const MAX_MILISEGUNDOS = 10000;
@@ -229,7 +231,7 @@ BTN_MUTE.addEventListener("click", () => {
 
 gameOverTempo = setInterval(
     () => {
-        if(parseInt(BATERIA.innerText) == 10 && !controleDoJumpScare)
+        if(parseInt(BATERIA.innerText) == BATERIA_LIMITE_MINIMO && !controleDoJumpScare)
         {
             alert(`Parabéns! Você conseguiu ${PONTOS_INTERFACE.innerText} pontos!`);
             let nickname = prompt("Digite o seu nickname: ", "coloque aqui seu nickname...");
