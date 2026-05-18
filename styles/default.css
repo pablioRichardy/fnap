@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Pixelify Sans';
+}
+body{
+    background-color: rgb(0, 1, 0);
+}
+
+/* Visualização da Tela Jogo e Informações do Jogo */
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#game-content{
+    width: 80%;
+    max-width: 960px;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}   
+#tela{
+    user-select: none;
+    position: relative;
+    width: 960px;
+    max-width: 100%;
+    height: 540px;
+    max-height: 90%;
+}
+#cena{
+    user-select: none;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9999;
+}
+
+/* Estilização da Luz */
+#luz{
+    border-radius: 50px;
+    pointer-events: none;
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 99999;
+
+    width: 200px;
+    height: 200px;
+
+    transform: translate(-50%, -50%);
+
+    background-image: url("../images/lanterna.png");
+    background-position: center center;
+    background-size: 98% 98%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#luz-colisao{
+    width: 40px;
+    height: 40px;
+}
+
+/* Estilos Boss */
+.area-boss{
+    position: absolute;
+    height: 100%;
+}
+.boss{
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    transform: translate(20px, -50px);
+}
+#boss-direita{
+    right: 0;
+    transform: translate(-20px, -50px);
+}
+.boss-colisao{
+    user-select: none;
+    opacity: 0;
+    position: absolute;
+    width: 60px;
+    height: 432px;
+    transform: translateX(50px);
+}
+#boss-direita-colisao{
+    right: 0;
+    transform: translateX(-50px);
+}
+
+/* Estilos Informações do Jogo */
+#infos-jogo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.interface{
+    color: rgb(146, 142, 128);
+    font-family: 'Pixelify Sans';
+}
+
+/* Botão de mute */
+#btn-mute{
+    align-self: center;
+    font-family: 'Pixelify Sans';
+    padding: 5px;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    width: 75px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 3px solid rgb(146, 142, 128);
+    color: rgb(146, 142, 128);
+    border-radius: 10px;
+}
+#icon-mute{
+    display: none;
+}
+
+
+/* Img JumpScare estilo */
+#img-jumpscare{
+    display: none;
+    position: absolute;
+    z-index: 100000;
+}
+
+/* Estilo Scoreboard */
+#scoreboard{
+    width: 80%;
+    max-width: 960px;
+    color: rgb(146, 142, 128);
+    font-family: 'Pixelify Sans';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+th{
+    padding: 10px;
+}
+/* Utils */
+.display-none{
+    display: none;
+}

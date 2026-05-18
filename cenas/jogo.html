@@ -1,0 +1,40 @@
+<script src="scripts/index.js" defer></script>
+<div id="game-content">
+    <div id="tela">
+        <img src="images/jumpscare.gif" alt="" id="img-jumpscare">
+        <img src="images/FNAP_sala.gif" id="cena">
+        <img src="images/bobao_esquerdista.png" id="boss-esquerda" class="boss">
+        <div class="boss-colisao" id="boss-esquerda-colisao">
+        </div>
+        <img src="images/bobao_direitinha.png" id="boss-direita" class="boss">
+        <div class="boss-colisao" id="boss-direita-colisao">
+        </div>
+        <div style="display: none;" id="bosses-audio">
+            <div id="audio-boss-esquerda"></div>
+            <div id="audio-boss-direita"></div>
+        </div>
+    </div>
+    <div id="infos-jogo">
+        <div id="infos-esquerda">
+            <div class="interface">
+                Quantidade de Ganks:
+                <span id="quantidade-ganks">0</span>
+            </div>
+            <div class="interface">
+                Score:
+                <span id="pontos">0</span>
+            </div>
+        </div>
+        <div id="infos-direita">
+            <div class="interface">
+                Bateria:
+                <span id="bateria">10</span>/10
+            </div>
+        </div>
+    </div>
+    <button id="btn-mute">
+        <img src="images/icons/music-note-beamed.svg" alt="" id="icon-song">
+        <img src="images/icons/volume-mute-fill.svg" alt="" id="icon-mute">
+        MUTE
+    </button>
+</div>
