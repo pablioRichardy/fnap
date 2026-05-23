@@ -44,12 +44,6 @@
     z-index: 1;
 }
 
-#titulo{
-    color: rgb(67, 23, 35);
-    text-align: center;
-    font-size: 6.5rem;
-}
-
 .menu-btn-grupo{
     display: flex;
     flex-direction: column;

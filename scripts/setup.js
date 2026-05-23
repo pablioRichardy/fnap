@@ -15,7 +15,7 @@ fetch("/cenas/menu.html").then((response) => {
 }).then((html) => {
     document.querySelector("#camera").innerHTML = html;
 
-    rotar(document.getElementById("btn-jogar"), "/cenas/jogo.html", "./modulos/jogo.js");
+    rotar(document.getElementById("btn-jogar"), "/cenas/jogo.html", "./jojo.js");
     rotar(document.getElementById("btn-scoreboard"), "/cenas/scoreboard.html");
     rotar(document.getElementById("btn-creditos"), "/cenas/creditos.html");
 });

@@ -162,7 +162,7 @@ function gastaLanterna() {
 
     if(ESTA_VAZIO)
         return;
-
+    
 
     BATERIA.innerText = CARGA_LANTERNA - 1;
 }
